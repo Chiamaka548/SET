@@ -1,17 +1,16 @@
 {
-  "name": "set",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build": "tailwindcss build -i ./src/input.css -o ./dist/output.css --minify",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^4.1.4"
-  },
-  "devDependencies": {},
-  "description": ""
+    "name": "set",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "tailwindcss -i ./styles.css -o ./dist/output.css --minify",
+        "dev": "tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.1"
+    },
+    "description": ""
 }
