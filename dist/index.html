@@ -266,8 +266,8 @@
     
         <!-- Statistics Section -->
         <h4 class="text-2xl font-bold text-gray-800 mb-6">Statistics</h4>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
-          <div class="bg-blue-50 p-4 rounded-xl h-32 w-32 flex flex-col justify-between">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          <div class="bg-blue-50 p-4 rounded-xl h-32 w-full max-w-xs flex flex-col justify-between">
             <p class="text-gray-400 text-sm">
               Courses <br> Completed
             </p>
@@ -277,7 +277,7 @@
             </div>
           </div>
     
-          <div class="bg-blue-50 p-4 rounded-xl h-32 w-32 flex flex-col justify-between">
+          <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-sm">
               Total Points <br> Gained
             </p>
@@ -287,7 +287,7 @@
             </div>
           </div>
     
-          <div class="bg-blue-50 p-4 rounded-xl h-32 w-32 flex flex-col justify-between">
+          <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-sm">
               Courses <br> In Progress
             </p>
@@ -297,7 +297,7 @@
             </div>
           </div>
     
-          <div class="bg-blue-50 p-4 rounded-xl h-32 w-32 flex flex-col justify-between">
+          <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-base">
               Tasks <br> Finished
             </p>
@@ -350,6 +350,13 @@
       </div>
     </aside>
 
-    <script src="index.js"></script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+      });      
+    </script>
   </body>
 </html>
