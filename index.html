@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SE.T</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/output.css">
+    <link rel="stylesheet" href="dist/output.css">
   </head>
 
  <!-- body section -->
-  <body class="flex min-h-screen bg-gray-100 font-[Manrope] flex-col lg:flex-row">
+  <body class="flex min-h-screen bg-gray-100 font-[Manrope]">
 
     <!-- Sidebar -->
     <div id="sidebar" class="w-64 lg:w-64 bg-white shadow-md h-screen p-5 flex flex-col justify-between items-center lg:static fixed z-50 lg:transform-none transform -translate-x-full transition-transform duration-300 ease-in-out">
-      <div>
         <div class="flex items-center mb-16">
           <img src="Images/SE.T logo.svg" alt="Globe Icon" class="w-6 h-6 mr-2">
           <span class="text-3xl font-bold tracking-widest text-blue-600 font-[Gilroy]">SE<span class="text-blue-500 px-1">•</span>T</span>
-        </div>
       </div>
 
       <!-- Navigation -->
@@ -92,9 +90,9 @@
         <div class="flex items-end mb-5">
           <h1 class="text-3xl font-semibold">My Courses</h1>
           <a href="#" class="flex-grow text-sm text-blue-600 ml-4 mb-1 font-medium">View All</a>
-          <div class="flex items-center gap-2">
-            <img src="Images/search 1.svg" alt="Search Icon" class="w-5 h-5">
-            <input type="search" placeholder="Search..." class="w-18 text-sm rounded-md px-2 py-1">
+          <div class="reltive flex items-center">
+            <img src="Images/search 1.svg" alt="Search Icon" class="absolute left-2 w-5 h-5">
+            <input type="search" placeholder="Search..." class="w-24 text-sm rounded-md pl-8 pr-2 py-1">
           </div>
         </div>
   
@@ -248,66 +246,65 @@
     </div>
 
     <!-- Aside (Statistics and Activity) -->
-    <aside class="w-70 bg-white p-6 lg:flex flex-col justify-between">
+    <aside class="w-96 bg-white p-6 flex flex-col justify-between">
       <div>
+        <!-- Notification and User Info Row -->
         <div class="flex items-center justify-between mb-6">
-          <div class="relative">
-            <img src="Images/notification bell.svg" alt="notification icon">
-          </div>
-          <div class="flex items-center gap-4 bg-blue-50 py-2 px-3 rounded-xl">
-            <img src="Images/Rectangle 4.svg" alt="">
-            <div>
-              <p class="text-lg font-semibold">Bruno Fernandes</p>
+          <img src="Images/notification bell.svg" alt="notification icon" />
+          <div class="flex items-center gap-2 bg-blue-50 py-2 px-3 rounded-lg">
+            <img src="Images/Rectangle 4.svg" alt="" />
+            <div class="flex flex-col">
+              <p class="text-sm font-semibold">Bruno Fernandes</p>
               <p class="text-xs text-blue-500">Basic Plan</p>
             </div>
-            <img src="Images/Vector.svg" alt="dropdown icon">
+            <img src="Images/Vector.svg" alt="dropdown icon" />
           </div>
         </div>
     
         <!-- Statistics Section -->
         <h4 class="text-2xl font-bold text-gray-800 mb-6">Statistics</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
-          <div class="bg-blue-50 p-4 rounded-xl h-32 w-full max-w-xs flex flex-col justify-between">
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="bg-blue-50 p-4 rounded-xl flex flex-col justify-between h-28">
             <p class="text-gray-400 text-sm">
-              Courses <br> Completed
+              Courses <br /> Completed
             </p>
             <div class="flex items-center justify-between">
-              <img src="Images/Rectangle 29.svg" alt="">
+              <img src="Images/Rectangle 29.svg" alt="" />
               <h3 class="text-xl font-bold text-blue-500">02</h3>
             </div>
           </div>
     
           <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-sm">
-              Total Points <br> Gained
+              Total Points <br /> Gained
             </p>
             <div class="flex items-center justify-between">
-              <img src="Images/Rectangle 29.svg" alt="">
+              <img src="Images/Rectangle 29.svg" alt="" />
               <h3 class="text-xl font-bold text-blue-500">250</h3>
             </div>
           </div>
     
           <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-sm">
-              Courses <br> In Progress
+              Courses <br /> In Progress
             </p>
             <div class="flex items-center justify-between">
-              <img src="Images/Rectangle 29.svg" alt="">
+              <img src="Images/Rectangle 29.svg" alt="" />
               <h3 class="text-xl font-bold text-blue-500">03</h3>
             </div>
           </div>
     
           <div class="bg-blue-50 p-4 rounded-xl h-32 w-full flex flex-col justify-between">
             <p class="text-gray-400 text-base">
-              Tasks <br> Finished
+              Tasks <br /> Finished
             </p>
             <div class="flex items-center justify-between">
-              <img src="Images/Rectangle 29.svg" alt="">
+              <img src="Images/Rectangle 29.svg" alt="" />
               <h3 class="text-xl font-bold text-blue-500">05</h3>
             </div>
           </div>
         </div>
-
+    
         <!-- Activity Section -->
         <div class="flex justify-between py-6">
           <h2 class="text-2xl font-semibold">Activity</h2>
@@ -320,31 +317,31 @@
         <div class="grid grid-cols-7 gap-3 text-center" id="activity-chart">
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Mon</p>
-            <img src="Images/Rectangle 9.svg" alt="bar 1" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 9.svg" alt="bar 1" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Tues</p>
-            <img src="Images/Rectangle 18.svg" alt="bar 2" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 18.svg" alt="bar 2" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Wed</p>
-            <img src="Images/Rectangle 19.svg" alt="bar 3" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 19.svg" alt="bar 3" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Thurs</p>
-            <img src="Images/Rectangle 20.svg" alt="bar 4" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 20.svg" alt="bar 4" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Fri</p>
-            <img src="Images/Rectangle 21.svg" alt="bar 5" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 21.svg" alt="bar 5" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Sat</p>
-            <img src="Images/Rectangle 22.svg" alt="bar 6" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 22.svg" alt="bar 6" class="w-8 h-auto" />
           </div>
           <div class="flex flex-col-reverse items-center">
             <p class="mb-4 text-sm">Sun</p>
-            <img src="Images/Rectangle 23.svg" alt="bar 7" class="w-8 h-auto"/>
+            <img src="Images/Rectangle 23.svg" alt="bar 7" class="w-8 h-auto" />
           </div>
         </div>
       </div>
@@ -356,7 +353,7 @@
 
       hamburger.addEventListener('click', () => {
         sidebar.classList.toggle('-translate-x-full');
-      });      
+      });
     </script>
   </body>
 </html>
