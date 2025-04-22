@@ -66,6 +66,9 @@
 .z-20 {
   z-index: 20;
 }
+.z-40 {
+  z-index: 40;
+}
 .z-50 {
   z-index: 50;
 }
@@ -186,6 +189,12 @@
 .table-row-group {
   display: table-row-group;
 }
+.h-\[106px\] {
+  height: 106px;
+}
+.h-\[120px\] {
+  height: 120px;
+}
 .h-auto {
   height: auto;
 }
@@ -194,6 +203,9 @@
 }
 .max-h-screen {
   max-height: 100vh;
+}
+.min-h-\[120px\] {
+  min-height: 120px;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -814,6 +826,10 @@
   border-style: var(--tw-border-style);
   border-width: 1px;
 }
+.border-0 {
+  border-style: var(--tw-border-style);
+  border-width: 0px;
+}
 .border-x {
   border-inline-style: var(--tw-border-style);
   border-inline-width: 1px;
@@ -1312,6 +1328,11 @@
   transition-timing-function: var(--tw-ease, ease);
   transition-duration: var(--tw-duration, 0s);
 }
+.transition-all {
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
 .transition-transform {
   transition-property: transform, translate, scale, rotate;
   transition-timing-function: var(--tw-ease, ease);
@@ -1395,6 +1416,21 @@
 }
 .ring-inset {
   --tw-ring-inset: inset;
+}
+.group-\[\.active\]\:-rotate-45 {
+  &:is(:where(.group):is(.active) *) {
+    rotate: calc(45deg * -1);
+  }
+}
+.group-\[\.active\]\:rotate-45 {
+  &:is(:where(.group):is(.active) *) {
+    rotate: 45deg;
+  }
+}
+.group-\[\.active\]\:opacity-0 {
+  &:is(:where(.group):is(.active) *) {
+    opacity: 0%;
+  }
 }
 .focus\:ring {
   &:focus {

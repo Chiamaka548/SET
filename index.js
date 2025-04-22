@@ -1,29 +1,34 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const sidebar = document.getElementById('sidebar');
-const barTop = document.querySelector('.bar-top');
-const barMiddle = document.querySelector('.bar-middle');
-const barBottom = document.querySelector('.bar-bottom');
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
 
-hamburger.addEventListener('click', () => {
-  // Toggle sidebar visibility
-  sidebar.classList.toggle('translate-x-0');
-  sidebar.classList.toggle('-translate-x-full');
+  hamburger.addEventListener('click', () => {
+    // Toggle sidebar visibility
+    sidebar.classList.toggle('translate-x-0');
+    sidebar.classList.toggle('-translate-x-full');
 
-  // Animate hamburger bars
-  if (sidebar.classList.contains('translate-x-0')) {
-    // Transform to "X"
-    barTop.classList.remove('translate-y-0', 'rotate-0');
-    barTop.classList.add('translate-y-2', 'rotate-45');
-    barMiddle.classList.add('opacity-0');
-    barBottom.classList.remove('translate-y-0', '-rotate-0');
-    barBottom.classList.add('-translate-y-2', '-rotate-45');
-  } else {
-    // Revert to hamburger
-    barTop.classList.remove('translate-y-2', 'rotate-45');
-    barTop.classList.add('translate-y-0', 'rotate-0');
-    barMiddle.classList.remove('opacity-0');
-    barBottom.classList.remove('-translate-y-2', '-rotate-45');
-    barBottom.classList.add('translate-y-0', '-rotate-0');
-  }
+    // Toggle hamburger animation
+    const lines = hamburger.querySelectorAll('.line');
+    lines[0].classList.toggle('rotate-45');
+    lines[0].classList.toggle('translate-y-2');
+    lines[1].classList.toggle('opacity-0');
+    lines[2].classList.toggle('-rotate-45');
+    lines[2].classList.toggle('-translate-y-2');
+  });
+
+  // Close sidebar when clicking outside on mobile
+  document.addEventListener('click', (event) => {
+    if (
+      !sidebar.contains(event.target) &&
+      !hamburger.contains(event.target) &&
+      sidebar.classList.contains('translate-x-0')
+    ) {
+      sidebar.classList.remove('translate-x-0');
+      sidebar.classList.add('-translate-x-full');
+      const lines = hamburger.querySelectorAll('.line');
+      lines[0].classList.remove('rotate-45', 'translate-y-2');
+      lines[1].classList.remove('opacity-0');
+      lines[2].classList.remove('-rotate-45', '-translate-y-2');
+    }
+  });
 });
